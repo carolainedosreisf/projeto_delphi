@@ -1,0 +1,241 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 438
+  Width = 433
+  object FDConnection_db: TFDConnection
+    Params.Strings = (
+      'LockingMode=Normal'
+      
+        'Database=C:\Carolaine\faculdade\2'#176'  fase\delphi\trabalho_final\p' +
+        'art_22\dados.sq3'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 48
+    Top = 376
+  end
+  object FDPhysSQLiteDriverLink_db: TFDPhysSQLiteDriverLink
+    Left = 168
+    Top = 376
+  end
+  object FDQuery_clientes: TFDQuery
+    Connection = FDConnection_db
+    SQL.Strings = (
+      'create table if not exists clientes('
+      'id int no null,'
+      'nome varchar(50),'
+      'endereco varchar(50),'
+      'id_cidade int,'
+      'primary key (id)'
+      ');')
+    Left = 40
+    Top = 96
+  end
+  object FDTable_clientes: TFDTable
+    Active = True
+    IndexFieldNames = 'id'
+    Connection = FDConnection_db
+    UpdateOptions.UpdateTableName = 'clientes'
+    TableName = 'clientes'
+    Left = 152
+    Top = 96
+    object FDTable_clientesid: TIntegerField
+      Alignment = taLeftJustify
+      DisplayLabel = 'C'#243'digo do Cliente'
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDTable_clientesnome: TStringField
+      DisplayLabel = 'Nome'
+      FieldName = 'nome'
+      Origin = 'nome'
+      Required = True
+      Size = 50
+    end
+    object FDTable_clientesendereco: TStringField
+      DisplayLabel = 'Endere'#231'o'
+      FieldName = 'endereco'
+      Origin = 'endereco'
+      Required = True
+      Size = 50
+    end
+    object FDTable_clientesid_cidade: TIntegerField
+      Alignment = taLeftJustify
+      DisplayLabel = 'C'#243'digo da Cidade'
+      FieldName = 'id_cidade'
+      Origin = 'id_cidade'
+      Required = True
+    end
+    object FDTable_clientesnome_cidade: TStringField
+      DisplayLabel = 'Nome da Cidade'
+      FieldKind = fkLookup
+      FieldName = 'nome_cidade'
+      LookupDataSet = FDTable_cidades
+      LookupKeyFields = 'id_cidade'
+      LookupResultField = 'nome_cidade'
+      KeyFields = 'id_cidade'
+      Required = True
+      Size = 50
+      Lookup = True
+    end
+  end
+  object FDQuery_cidades: TFDQuery
+    Connection = FDConnection_db
+    SQL.Strings = (
+      'create table if not exists cidades('
+      'id_cidade int no null,'
+      'nome_cidade varchar(50),'
+      'sigla_estado varchar(2),'
+      ''
+      'primary key (id_cidade)'
+      ');')
+    Left = 40
+    Top = 176
+  end
+  object FDTable_cidades: TFDTable
+    Active = True
+    IndexFieldNames = 'id_cidade'
+    Connection = FDConnection_db
+    UpdateOptions.UpdateTableName = 'cidades'
+    TableName = 'cidades'
+    Left = 152
+    Top = 176
+    object FDTable_cidadesid_cidade: TIntegerField
+      Alignment = taLeftJustify
+      DisplayLabel = 'C'#243'digo da cidade'
+      FieldName = 'id_cidade'
+      Origin = 'id_cidade'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDTable_cidadesnome_cidade: TStringField
+      DisplayLabel = 'Nome da cidade'
+      FieldName = 'nome_cidade'
+      Origin = 'nome_cidade'
+      Required = True
+      Size = 50
+    end
+    object FDTable_cidadessigla_estado: TStringField
+      DisplayLabel = 'Sigla do estado'
+      FieldName = 'sigla_estado'
+      Origin = 'sigla_estado'
+      Required = True
+      Size = 2
+    end
+  end
+  object FDQuery_cadastro: TFDQuery
+    Connection = FDConnection_db
+    SQL.Strings = (
+      'create table if not exists cadastro('
+      #9'id_cadastro int not null,'
+      #9'data_cadastro varchar(50),'
+      #9'id_cliente int,'
+      #9'numero_celular varchar(50),'
+      #9'dia_pagamento varchar(2),'
+      #9'valor_pagamento double,'
+      #9'primary key (id_cadastro)'
+      ''
+      ')')
+    Left = 48
+    Top = 40
+  end
+  object FDTable_cadastro: TFDTable
+    Active = True
+    IndexFieldNames = 'id_cadastro'
+    Connection = FDConnection_db
+    UpdateOptions.UpdateTableName = 'cadastro'
+    TableName = 'cadastro'
+    Left = 152
+    Top = 40
+    object FDTable_cadastroid_cadastro: TIntegerField
+      Alignment = taLeftJustify
+      DisplayLabel = 'C'#243'digo do cadastro'
+      DisplayWidth = 10
+      FieldName = 'id_cadastro'
+      Origin = 'id_cadastro'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDTable_cadastrodata_cadastro: TStringField
+      DisplayLabel = 'Data do cadastro'
+      DisplayWidth = 14
+      FieldName = 'data_cadastro'
+      Origin = 'data_cadastro'
+      Required = True
+      EditMask = '!99/99/0000;0;_'
+      Size = 50
+    end
+    object FDTable_cadastroid_cliente: TIntegerField
+      Alignment = taLeftJustify
+      DisplayLabel = 'C'#243'digo do Cliente'
+      DisplayWidth = 14
+      FieldName = 'id_cliente'
+      Origin = 'id_cliente'
+      ReadOnly = True
+      Required = True
+    end
+    object FDTable_cadastronome_cliente: TStringField
+      DisplayLabel = 'Nome do Cliente'
+      DisplayWidth = 29
+      FieldKind = fkLookup
+      FieldName = 'nome_cliente'
+      LookupDataSet = FDTable_clientes
+      LookupKeyFields = 'id'
+      LookupResultField = 'nome'
+      KeyFields = 'id_cliente'
+      Size = 50
+      Lookup = True
+    end
+    object FDTable_cadastronumero_celular: TStringField
+      DisplayLabel = 'N'#250'mero de Celular'
+      DisplayWidth = 23
+      FieldName = 'numero_celular'
+      Origin = 'numero_celular'
+      Required = True
+      EditMask = '!\(99\)00000-0000;1;_'
+      Size = 50
+    end
+    object FDTable_cadastrodia_pagamento: TStringField
+      DisplayLabel = 'Dia do Pagamento'
+      DisplayWidth = 12
+      FieldName = 'dia_pagamento'
+      Origin = 'dia_pagamento'
+      Required = True
+      Size = 2
+    end
+    object FDTable_cadastrovalor_pagamento2: TStringField
+      DisplayLabel = 'Valor do Pagamento'
+      FieldName = 'valor_pagamento2'
+      Origin = 'valor_pagamento2'
+      Required = True
+      Size = 50
+    end
+  end
+  object FDQuery_usuario: TFDQuery
+    Connection = FDConnection_db
+    Left = 40
+    Top = 256
+  end
+  object FDTable_usuarios: TFDTable
+    Active = True
+    Connection = FDConnection_db
+    UpdateOptions.UpdateTableName = 'usuarios'
+    TableName = 'usuarios'
+    Left = 152
+    Top = 256
+    object FDTable_usuariosnome_user: TStringField
+      FieldName = 'nome_user'
+      Origin = 'nome_user'
+      Required = True
+      Size = 50
+    end
+    object FDTable_usuariossenhar_user: TStringField
+      FieldName = 'senhar_user'
+      Origin = 'senhar_user'
+      Required = True
+      Size = 50
+    end
+  end
+end

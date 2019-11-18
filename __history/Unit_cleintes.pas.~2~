@@ -1,0 +1,24 @@
+unit Unit_cleintes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TForm_clientes = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_clientes: TForm_clientes;
+
+implementation
+
+{$R *.dfm}
+
+end.

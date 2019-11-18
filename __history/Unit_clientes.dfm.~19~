@@ -1,0 +1,235 @@
+object Form_clientes: TForm_clientes
+  Left = 0
+  Top = 0
+  ClientHeight = 505
+  ClientWidth = 758
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid_clientes: TDBGrid
+    Left = 0
+    Top = 0
+    Width = 758
+    Height = 120
+    Align = alTop
+    DataSource = DataSource_clientes
+    ReadOnly = True
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator_clientes: TDBNavigator
+    Left = 0
+    Top = 480
+    Width = 758
+    Height = 25
+    DataSource = DataSource_clientes
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
+    Align = alBottom
+    TabOrder = 1
+  end
+  object Panel_clientes: TPanel
+    Left = 0
+    Top = 120
+    Width = 758
+    Height = 360
+    Align = alClient
+    Alignment = taLeftJustify
+    TabOrder = 2
+    object id_cliente: TLabel
+      Left = 24
+      Top = 8
+      Width = 105
+      Height = 18
+      Caption = 'C'#243'digo do Cliente'
+      FocusControl = DB_id_cliente
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Palatino Linotype'
+      Font.Style = []
+      ParentFont = False
+    end
+    object nome: TLabel
+      Left = 24
+      Top = 60
+      Width = 36
+      Height = 18
+      Caption = 'Nome'
+      FocusControl = DB_nome
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Palatino Linotype'
+      Font.Style = []
+      ParentFont = False
+    end
+    object endereco: TLabel
+      Left = 24
+      Top = 121
+      Width = 54
+      Height = 18
+      Caption = 'Endere'#231'o'
+      FocusControl = DB_endereco
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Palatino Linotype'
+      Font.Style = []
+      ParentFont = False
+    end
+    object id_cidade: TLabel
+      Left = 24
+      Top = 182
+      Width = 75
+      Height = 18
+      Caption = 'Id da Cidade'
+      FocusControl = DB_id_cidade
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Palatino Linotype'
+      Font.Style = []
+      ParentFont = False
+    end
+    object nome_cidade: TLabel
+      Left = 120
+      Top = 182
+      Width = 99
+      Height = 18
+      Caption = 'Nome da Cidade'
+      FocusControl = DB_id_cidade
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Palatino Linotype'
+      Font.Style = []
+      ParentFont = False
+    end
+    object DB_id_cliente: TDBEdit
+      Left = 24
+      Top = 32
+      Width = 281
+      Height = 26
+      DataField = 'id'
+      DataSource = DataSource_clientes
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Palatino Linotype'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+    object DB_nome: TDBEdit
+      Left = 24
+      Top = 84
+      Width = 281
+      Height = 26
+      DataField = 'nome'
+      DataSource = DataSource_clientes
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Palatino Linotype'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
+    object DB_endereco: TDBEdit
+      Left = 24
+      Top = 145
+      Width = 281
+      Height = 26
+      DataField = 'endereco'
+      DataSource = DataSource_clientes
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Palatino Linotype'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+    end
+    object DB_id_cidade: TDBEdit
+      Left = 26
+      Top = 206
+      Width = 73
+      Height = 26
+      DataField = 'id_cidade'
+      DataSource = DataSource_clientes
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Palatino Linotype'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 3
+    end
+    object nome_cidade_select: TDBLookupComboBox
+      Left = 120
+      Top = 206
+      Width = 185
+      Height = 26
+      DataField = 'nome_cidade'
+      DataSource = DataSource_clientes
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGray
+      Font.Height = -13
+      Font.Name = 'Palatino Linotype'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 4
+    end
+    object Salvar: TButton
+      Left = 26
+      Top = 256
+      Width = 121
+      Height = 25
+      Caption = 'Salvar'
+      TabOrder = 5
+      OnClick = SalvarClick
+    end
+    object Novo: TButton
+      Left = 184
+      Top = 255
+      Width = 121
+      Height = 25
+      Caption = 'Novo'
+      TabOrder = 6
+      OnClick = NovoClick
+    end
+    object Cancelar: TButton
+      Left = 26
+      Top = 312
+      Width = 121
+      Height = 25
+      Caption = 'Cancelar'
+      TabOrder = 7
+      OnClick = CancelarClick
+    end
+    object Excluir: TButton
+      Left = 184
+      Top = 312
+      Width = 121
+      Height = 25
+      Caption = 'Excluir'
+      TabOrder = 8
+      OnClick = ExcluirClick
+    end
+  end
+  object DataSource_clientes: TDataSource
+    DataSet = DataModule1.FDTable_clientes
+    Left = 704
+    Top = 160
+  end
+end

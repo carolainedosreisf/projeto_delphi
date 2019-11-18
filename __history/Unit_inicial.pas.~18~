@@ -1,0 +1,70 @@
+unit Unit_inicial;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus;
+
+type
+  TForm_inicial = class(TForm)
+    chama_cadastro: TButton;
+    chama_clientes: TButton;
+    chama_cidades: TButton;
+    MainMenu1: TMainMenu;
+    Cadastro1: TMenuItem;
+    Clientes1: TMenuItem;
+    Cidades1: TMenuItem;
+    bem_vindo: TLabel;
+    instrucao: TLabel;
+    procedure chama_cadastroClick(Sender: TObject);
+    procedure chama_clientesClick(Sender: TObject);
+    procedure chama_cidadesClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Cidades1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_inicial: TForm_inicial;
+
+implementation
+
+{$R *.dfm}
+uses Unit_cadastro, Unit_clientes, Unit_dbs, Unit_cidades, Unit_cadastar_user,
+  Unit_login;
+procedure TForm_inicial.Button1Click(Sender: TObject);
+begin
+Form_Cadastrar_user.show;
+end;
+
+procedure TForm_inicial.Button2Click(Sender: TObject);
+begin
+     Form_login.Show;
+end;
+
+procedure TForm_inicial.chama_cadastroClick(Sender: TObject);
+begin
+  Form_Cadastro.show;
+end;
+
+procedure TForm_inicial.chama_cidadesClick(Sender: TObject);
+begin
+  Form_cidades.Show;
+end;
+
+procedure TForm_inicial.chama_clientesClick(Sender: TObject);
+begin
+  Form_clientes.Show;
+end;
+
+procedure TForm_inicial.Cidades1Click(Sender: TObject);
+begin
+  form_cidades.Show;
+end;
+
+end.

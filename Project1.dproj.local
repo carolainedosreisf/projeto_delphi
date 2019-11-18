@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/11/13 13:27:37.000.709,=C:\Users\carol\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/11/13 15:56:18.000.266,=C:\Users\carol\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/11/13 15:58:15.000.574,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit_cadastro.pas=C:\Users\carol\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/11/13 15:58:15.000.574,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit_cadastro.dfm=C:\Users\carol\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2019/11/13 15:58:16.000.279,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Project1.dproj=C:\Users\carol\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2019/11/13 15:58:30.000.778,=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit1.pas</Transaction>
+    <Transaction>2019/11/13 16:01:03.000.943,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit_dbs.dfm=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit1.dfm</Transaction>
+    <Transaction>2019/11/13 16:01:03.000.943,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit_dbs.pas=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit1.pas</Transaction>
+    <Transaction>2019/11/13 16:41:57.000.932,=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit2.pas</Transaction>
+    <Transaction>2019/11/13 16:43:47.000.280,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit2.dfm=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit_clientes.dfm</Transaction>
+    <Transaction>2019/11/13 16:43:47.000.280,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit2.pas=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit_clientes.pas</Transaction>
+    <Transaction>2019/11/13 16:45:31.000.541,=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit3.pas</Transaction>
+    <Transaction>2019/11/13 16:48:02.000.100,=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit1.pas</Transaction>
+    <Transaction>2019/11/13 16:48:12.000.637,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit1.dfm=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit_cleintes.dfm</Transaction>
+    <Transaction>2019/11/13 16:48:12.000.637,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit1.pas=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_3\Unit_cleintes.pas</Transaction>
+    <Transaction>2019/11/14 11:05:14.000.649,=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_4\Unit2.pas</Transaction>
+    <Transaction>2019/11/14 11:06:56.000.849,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_4\Unit2.pas=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_4\Unit_cidades.pas</Transaction>
+    <Transaction>2019/11/14 11:06:56.000.849,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_4\Unit2.dfm=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_4\Unit_cidades.dfm</Transaction>
+    <Transaction>2019/11/15 11:25:55.000.553,=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_14\Unit2.pas</Transaction>
+    <Transaction>2019/11/15 11:29:39.000.849,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_14\Unit2.pas=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_14\Unit_login.pas</Transaction>
+    <Transaction>2019/11/15 11:29:39.000.849,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_14\Unit2.dfm=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_14\Unit_login.dfm</Transaction>
+    <Transaction>2019/11/15 11:31:28.000.920,=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_14\Unit3.pas</Transaction>
+    <Transaction>2019/11/15 11:35:43.000.745,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_14\Unit3.pas=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_14\Unit_cadastar_user.pas</Transaction>
+    <Transaction>2019/11/15 11:35:43.000.745,C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_14\Unit3.dfm=C:\Carolaine\faculdade\2°  fase\delphi\trabalho_final\part_14\Unit_cadastar_user.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

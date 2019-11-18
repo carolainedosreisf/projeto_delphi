@@ -1,0 +1,52 @@
+object Form_inicial: TForm_inicial
+  Left = 0
+  Top = 0
+  Caption = 'P'#225'gina Inicial'
+  ClientHeight = 281
+  ClientWidth = 418
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object chama_cadastro: TButton
+    Left = 160
+    Top = 32
+    Width = 75
+    Height = 25
+    Caption = 'Cadastro'
+    TabOrder = 0
+    OnClick = chama_cadastroClick
+  end
+  object chama_clientes: TButton
+    Left = 160
+    Top = 96
+    Width = 75
+    Height = 25
+    Caption = 'Clientes'
+    TabOrder = 1
+    OnClick = chama_clientesClick
+  end
+  object chama_cidades: TButton
+    Left = 160
+    Top = 144
+    Width = 75
+    Height = 25
+    Caption = 'Cidades'
+    TabOrder = 2
+    OnClick = chama_cidadesClick
+  end
+  object Button1: TButton
+    Left = 160
+    Top = 232
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+end

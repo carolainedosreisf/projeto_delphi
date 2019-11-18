@@ -1,0 +1,37 @@
+unit Unit_cidades;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.ExtCtrls, Vcl.DBCtrls,
+  Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Mask;
+
+type
+  TForm_cidades = class(TForm)
+    DBGrid_cidades: TDBGrid;
+    DBNavigator_ciddades: TDBNavigator;
+    Panel_cidades: TPanel;
+    id_cidade: TLabel;
+    DB_id_cidade: TDBEdit;
+    DataSource_cidades: TDataSource;
+    nome_cidade: TLabel;
+    DB_cidade: TDBEdit;
+    sigla_uf: TLabel;
+    DB_sigla_uf: TDBEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_cidades: TForm_cidades;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit_dbs;
+
+end.

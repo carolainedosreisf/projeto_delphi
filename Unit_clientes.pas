@@ -1,0 +1,89 @@
+unit Unit_clientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.ExtCtrls, Vcl.DBCtrls,
+  Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Mask;
+
+type
+  TForm_clientes = class(TForm)
+    DBGrid_clientes: TDBGrid;
+    DBNavigator_clientes: TDBNavigator;
+    Panel_clientes: TPanel;
+    DataSource_clientes: TDataSource;
+    id_cliente: TLabel;
+    DB_id_cliente: TDBEdit;
+    nome: TLabel;
+    DB_nome: TDBEdit;
+    endereco: TLabel;
+    DB_endereco: TDBEdit;
+    id_cidade: TLabel;
+    DB_id_cidade: TDBEdit;
+    nome_cidade_select: TDBLookupComboBox;
+    nome_cidade: TLabel;
+    Salvar: TButton;
+    Novo: TButton;
+    Cancelar: TButton;
+    Excluir: TButton;
+    mensagem_erro: TLabel;
+    procedure SalvarClick(Sender: TObject);
+    procedure NovoClick(Sender: TObject);
+    procedure CancelarClick(Sender: TObject);
+    procedure ExcluirClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_clientes: TForm_clientes;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit_dbs, Unit_inicial;
+
+procedure TForm_clientes.CancelarClick(Sender: TObject);
+begin
+   Datamodule1.FDTable_clientes.Cancel;
+   mensagem_erro.caption:='';
+end;
+
+procedure TForm_clientes.ExcluirClick(Sender: TObject);
+begin
+  Datamodule1.FDTable_clientes.Delete;
+  mensagem_erro.caption:='';
+end;
+
+procedure TForm_clientes.NovoClick(Sender: TObject);
+begin
+  try
+     Datamodule1.FDTable_clientes.Append;
+     mensagem_erro.caption:='';
+     DB_id_cliente.SetFocus;
+  except
+    Datamodule1.FDTable_clientes.cancel;
+    Datamodule1.FDTable_clientes.Append;
+    mensagem_erro.caption:='';
+    DB_id_cliente.SetFocus;
+
+  end;
+end;
+
+procedure TForm_clientes.SalvarClick(Sender: TObject);
+begin
+
+  Try
+    datamodule1.FDTable_clientes.Post;
+    mensagem_erro.caption:='';
+  except
+      mensagem_erro.caption:='Não houve alterações, ou existem  campos vazios!';
+  End;
+
+end;
+
+end.

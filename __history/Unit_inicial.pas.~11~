@@ -1,0 +1,39 @@
+unit Unit_inicial;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm_inicial = class(TForm)
+    chama_cadastro: TButton;
+    chama_clientes: TButton;
+    chama_cidades: TButton;
+    procedure chama_cadastroClick(Sender: TObject);
+    procedure chama_clientesClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_inicial: TForm_inicial;
+
+implementation
+
+{$R *.dfm}
+uses Unit_cadastro, Unit_clientes, Unit_dbs, Unit_clientes;
+procedure TForm_inicial.chama_cadastroClick(Sender: TObject);
+begin
+  Form_Cadastro.show;
+end;
+
+procedure TForm_inicial.chama_clientesClick(Sender: TObject);
+begin
+  Form_clientes.Show;
+end;
+
+end.
